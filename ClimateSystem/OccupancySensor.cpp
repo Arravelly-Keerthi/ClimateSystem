@@ -1,4 +1,3 @@
-
 #include "OcccupancySensor.h"
 
 int OccupancySensor::getPeopleCount() {
