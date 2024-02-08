@@ -10,14 +10,16 @@
 #include "TempRegulator.h"
 #include "gtest/gtest.h"
 #include "AutoClimateControlSystem.h"
-
+#include  "ILogWriter.h"
+#include  "LogWriter.h"
 int main() {
     /*IOutsideTempSensor* outsideTempSensor = new OutsideTempSensor();
     IOccupancySensor* occupancySensor = new OccupancySensor();
     ITempCalculator* tempCalculator = new TempCalculator();
     ITempRegulator* tempRegulator = new TempRegulator();
+    ILogWriter* logWriter= new ConsoleLogWriter();
 
-    AutoClimateControlSystem autoClimateControl(outsideTempSensor, occupancySensor, tempCalculator, tempRegulator);
+    AutoClimateControlSystem autoClimateControl(outsideTempSensor, occupancySensor, tempCalculator, tempRegulator,logWriter);
 
     autoClimateControl.on();
     autoClimateControl.off();
