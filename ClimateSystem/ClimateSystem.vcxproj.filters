@@ -33,6 +33,9 @@
     <ClCompile Include="AutoClimateControlSystem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ClimateSystemTestSuite.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IOutsideTempSensor.h">
@@ -62,5 +65,8 @@
     <ClInclude Include="AutoClimateControlSystem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>
