@@ -13,7 +13,7 @@
 #include  "ILogWriter.h"
 #include  "LogWriter.h"
 int main() {
-    IOutsideTempSensor* outsideTempSensor = new OutsideTempSensor();
+    /*IOutsideTempSensor* outsideTempSensor = new OutsideTempSensor();
     IOccupancySensor* occupancySensor = new OccupancySensor();
     ITempCalculator* tempCalculator = new TempCalculator();
     ILogWriter* logWriter= new ConsoleLogWriter();
@@ -29,9 +29,9 @@ int main() {
     delete tempCalculator;
     delete tempRegulator;
 
-    return 0;
+    return 0;*/
 
-    /*testing::InitGoogleTest();
-    return RUN_ALL_TESTS();*/
+    testing::InitGoogleTest();
+    return RUN_ALL_TESTS();
 }
 
