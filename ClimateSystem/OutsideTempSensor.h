@@ -6,4 +6,5 @@ private:
     double outsideTemperature;
 public:
     double getOutsideTemperature() override;
+
 };
