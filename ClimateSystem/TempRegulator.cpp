@@ -1,6 +1,8 @@
 #include <iostream>
 #include "TempRegulator.h"
 
+using namespace std;
+
 void TempRegulator::regulateTemperature(double desiredTemp) {
-    std::cout << "Regulating temperature to " << desiredTemp << " degrees Celsius.\n";
+    cout << "Regulating temperature to " << desiredTemp << " degrees Celsius.\n";
 }
