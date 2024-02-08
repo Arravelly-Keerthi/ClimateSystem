@@ -13,11 +13,11 @@
 #include  "ILogWriter.h"
 #include  "LogWriter.h"
 int main() {
-    /*IOutsideTempSensor* outsideTempSensor = new OutsideTempSensor();
+    IOutsideTempSensor* outsideTempSensor = new OutsideTempSensor();
     IOccupancySensor* occupancySensor = new OccupancySensor();
     ITempCalculator* tempCalculator = new TempCalculator();
-    ITempRegulator* tempRegulator = new TempRegulator();
     ILogWriter* logWriter= new ConsoleLogWriter();
+    ITempRegulator* tempRegulator = new TempRegulator(logWriter);
 
     AutoClimateControlSystem autoClimateControl(outsideTempSensor, occupancySensor, tempCalculator, tempRegulator,logWriter);
 
@@ -29,9 +29,11 @@ int main() {
     delete outsideTempSensor;
     delete occupancySensor;
     delete tempCalculator;
-    delete tempRegulator;*/
+    delete tempRegulator;
 
-    testing::InitGoogleTest();
-    return RUN_ALL_TESTS();
+    return 0;
+
+    /*testing::InitGoogleTest();
+    return RUN_ALL_TESTS();*/
 }
 
