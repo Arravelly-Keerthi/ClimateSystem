@@ -22,8 +22,6 @@ int main() {
     autoClimateControl.on();
     autoClimateControl.off();
 
-
-
     delete outsideTempSensor;
     delete occupancySensor;
     delete tempCalculator;
