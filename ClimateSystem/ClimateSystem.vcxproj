@@ -136,10 +136,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutoClimateControlSystem.h" />
+    <ClInclude Include="ILogWriter.h" />
     <ClInclude Include="IOccupancySensor.h" />
     <ClInclude Include="IOutsideTempSensor.h" />
     <ClInclude Include="ITempCalculator.h" />
     <ClInclude Include="ITempRegulator.h" />
+    <ClInclude Include="LogWriter.h" />
     <ClInclude Include="OcccupancySensor.h" />
     <ClInclude Include="OutsideTempSensor.h" />
     <ClInclude Include="TempCalculator.h" />

@@ -62,5 +62,11 @@
     <ClInclude Include="AutoClimateControlSystem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ILogWriter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LogWriter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

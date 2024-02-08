@@ -11,15 +11,17 @@
 #include "ITempRegulator.h"
 #include "TempRegulator.h"
 #include "AutoClimateControlSystem.h"
-
+#include  "ILogWriter.h"
+#include  "LogWriter.h"
 int main() {
-    // Create instances of sensors and controllers
-    IOutsideTempSensor* outsideTempSensor = new OutsideTempSensor();
+    
+  /*  IOutsideTempSensor* outsideTempSensor = new OutsideTempSensor();
     IOccupancySensor* occupancySensor = new OccupancySensor();
     ITempCalculator* tempCalculator = new TempCalculator();
     ITempRegulator* tempRegulator = new TempRegulator();
+    ILogWriter* logWriter= new ConsoleLogWriter();
 
-    AutoClimateControlSystem autoClimateControl(outsideTempSensor, occupancySensor, tempCalculator, tempRegulator);
+    AutoClimateControlSystem autoClimateControl(outsideTempSensor, occupancySensor, tempCalculator, tempRegulator,logWriter);
 
     autoClimateControl.on();
     autoClimateControl.off();
@@ -27,7 +29,7 @@ int main() {
     delete outsideTempSensor;
     delete occupancySensor;
     delete tempCalculator;
-    delete tempRegulator;
+    delete tempRegulator;*/
 
     return 0;
 }
