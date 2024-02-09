@@ -1,0 +1,34 @@
+name: Code Coverage
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up CMake
+      uses: actions/setup-cmake@v1
+
+    - name: Configure and build project
+      run: cmake . && make
+
+    - name: Run tests and generate coverage
+      run: |
+        ctest --verbose
+        # Run your tests and generate coverage using your chosen tools
+
+    - name: Upload coverage report
+      uses: actions/upload-artifact@v2
+      with:
+        name: coverage-report
+        path: coverage/ # Specify the path to your coverage report directory
