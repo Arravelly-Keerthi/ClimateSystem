@@ -20,15 +20,18 @@ jobs:
       uses: actions/setup-cmake@v1
 
     - name: Configure and build project
-      run: cmake . && make
+      run: |
+        cmake . && make
 
     - name: Run tests and generate coverage
       run: |
         ctest --verbose
-        # Run your tests and generate coverage using your chosen tools
+        lcov --capture --directory . --output-file coverage.info
+        lcov --remove coverage.info '/usr/*' --output-file coverage.info # Remove system header files from coverage
+        genhtml coverage.info --output-directory ./coverage/ # Generate HTML report
 
     - name: Upload coverage report
       uses: actions/upload-artifact@v2
       with:
         name: coverage-report
-        path: coverage/ # Specify the path to your coverage report directory
+        path: ./coverage/ # Specify the path to your coverage report directory
