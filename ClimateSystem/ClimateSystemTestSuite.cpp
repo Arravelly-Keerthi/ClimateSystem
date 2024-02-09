@@ -3,6 +3,7 @@
 #include <gmock/gmock.h>
 #include "AutoClimateControlSystem.h"
 
+//Mock methods
 class MockOutsideTempSensor : public IOutsideTempSensor {
 public:
 	MOCK_METHOD(double, getOutsideTemperature, ());
@@ -13,7 +14,6 @@ public:
 	MOCK_METHOD(int, getPeopleCount, ());
 };
 
-// Mock classes for other interfaces
 class MockTempCalculator : public ITempCalculator {
 public:
 	MOCK_METHOD(double, calculateTemperature, (int peopleCount, double outsideTemp));
