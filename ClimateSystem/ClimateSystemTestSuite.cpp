@@ -29,6 +29,25 @@ public:
 	MOCK_METHOD(void, log, (const std::string& message));
 };
 
+
+TEST(ClimateSystemTestSuite, ExpectedIntForPeopleCount)
+{
+    MockOccupancySensor occupancySensor;
+
+    EXPECT_CALL(occupancySensor, getPeopleCount()).WillOnce(::testing::Return(4));
+
+    occupancySensor.getPeopleCount();
+}
+
+TEST(ClimateSystemTestSuite, ExpectedDoubleForOutsideTemperature)
+{
+    MockOutsideTempSensor outsideTempSensor;
+
+    EXPECT_CALL(outsideTempSensor, getOutsideTemperature()).WillOnce(::testing::Return(25));
+
+    outsideTempSensor.getOutsideTemperature();
+}
+
 TEST(ClimateSystemTestSuite, OnTurnsSystemOnAndRegulatesTemperature) {
     MockOutsideTempSensor outsideTempSensor;
     MockOccupancySensor occupancySensor;
@@ -47,6 +66,7 @@ TEST(ClimateSystemTestSuite, OnTurnsSystemOnAndRegulatesTemperature) {
 
     autoClimateControl.on();
 }
+
 
 TEST(ClimateSystemTestSuite, OffTurnsSystemOff) {
     MockOutsideTempSensor outsideTempSensor;
